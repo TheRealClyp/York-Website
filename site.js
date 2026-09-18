@@ -27,10 +27,14 @@ if (OS !== 'windows') { pickPane(OS); }
 var dlbtn = document.getElementById('dlbtn');
 var dlhint = document.getElementById('dlhint');
 if (dlbtn) {
-  if (OS === 'macos' || OS === 'linux') {
+  if (OS === 'linux') {
+    dlbtn.href = 'downloads/york-x86_64-linux.tar.gz';
+    dlbtn.textContent = 'Download for Linux';
+    if (dlhint) { dlhint.textContent = 'Auto-detected: Linux · york-x86_64-linux.tar.gz · SHA-256 verified.'; }
+  } else if (OS === 'macos') {
     dlbtn.href = '#install';
-    dlbtn.textContent = 'macOS / Linux — coming soon';
-    if (dlhint) { dlhint.textContent = 'Windows binaries are ready today. macOS and Linux builds are next.'; }
+    dlbtn.textContent = 'macOS — coming soon';
+    if (dlhint) { dlhint.textContent = 'Windows and Linux binaries are ready today. macOS is produced on a Mac and lands here next.'; }
   } else {
     dlbtn.href = 'downloads/york-setup-x64.exe';
     dlbtn.textContent = 'Download for Windows';

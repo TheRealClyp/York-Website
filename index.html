@@ -439,13 +439,14 @@ players.<span class='f'>push</span>(<span class='t'>Player</span> { pos: 1.0, hp
 <section id='install'>
 <div class='eyebrow'>Download</div>
 <h2>Get York</h2>
-<div class='relband'>v0.1.0 · Windows <b>x64 today</b> · SHA-256 verified · macOS &amp; Linux on the way</div>
+<div class='relband'>v0.1.0 · Windows x64 <b>available</b> · Linux x86_64 <b>available</b> · SHA-256 verified · macOS on the way</div>
 <div class='download'>
 <a class='dlbtn' id='dlbtn' href='downloads/york-setup-x64.exe'>Download for your OS</a>
 <p class='dlsmall' id='dlhint'>Your OS is auto-detected. Grab the installer or the portable archive.</p>
 <div class='dlrow'>
 <a class='mini' href='downloads/york-setup-x64.exe'>Windows .exe</a>
 <a class='mini' href='downloads/york-x86_64-windows.zip'>Windows .zip</a>
+<a class='mini' href='downloads/york-x86_64-linux.tar.gz'>Linux .tar.gz</a>
 <a class='mini' href='downloads/york.exe'>york.exe</a>
 <a class='mini' href='downloads/SHASUMS256.txt'>checksums</a>
 </div>
@@ -478,10 +479,17 @@ players.<span class='f'>push</span>(<span class='t'>Player</span> { pos: 1.0, hp
 <p class='note' style='margin-top:12px'>The installer is ready — it is waiting on the binaries. <a class='mini' href='https://github.com/TheRealClyp/York/releases'>Watch releases</a></p>
 </div>
 <div class='pane' data-os='linux'>
-<h3>Linux — command is ready, binary on the way</h3>
-<p class='note'>Linux builds are produced on Linux machines. The first release will ship x86_64 and arm64 archives plus this one-line installer, all SHA-256 verified.</p>
+<h3>Linux — binary + installer, ready to go</h3>
+<p class='note'>Built natively on Linux x86_64. The archive is portable; the one-line installer puts it in <code class='inline'>~/.york/bin</code> and adds it to your PATH.</p>
+<table class='dltable'>
+<tr><th>Artifact</th><th>Why you want it</th><th>Size</th><th></th></tr>
+<tr><td><b>york-x86_64-linux.tar.gz</b></td><td>Portable — extract and run <code class='inline'>bin/york</code><span class='sub'>no install, no PATH changes</span></td><td class='sz'>~ 0.5 MB</td><td><div class='cardwrap'><a class='mini' href='downloads/york-x86_64-linux.tar.gz'>Download</a></div></td></tr>
+<tr><td><b>install.sh</b></td><td>One-line installer — auto-detects your arch &amp; OS<span class='sub'>curl • pipe • sh</span></td><td class='sz'>—</td><td><div class='cardwrap'><a class='mini' href='installers/install.sh'>View</a></div></td></tr>
+</table>
+<div style='height:18px'></div>
+<p class='note'>Or pipe one line and let the installer take over:</p>
 <div class='cmdrow'><pre>curl -fsSL https://raw.githubusercontent.com/TheRealClyp/York/main/installers/install.sh | sh</pre><button class='copy' type='button'>copy</button></div>
-<p class='note' style='margin-top:12px'>Same story: the installer is ready, the binaries are in the pipe. <a class='mini' href='https://github.com/TheRealClyp/York/releases'>Watch releases</a></p>
+<p class='note' style='margin-top:12px'>Installs to <code class='inline'>~/.york/bin</code> and adds it to your PATH. Building a program needs a C compiler (<code class='inline'>gcc</code>/<code class='inline'>clang</code>/<code class='inline'>cc</code>). arm64 archives ship with the next release.</p>
 </div>
 <div class='pane' data-os='more'>
 <h3>Release notes</h3>
@@ -489,7 +497,7 @@ players.<span class='f'>push</span>(<span class='t'>Player</span> { pos: 1.0, hp
 <table class='dltable'>
 <tr><th>Item</th><th>Notes</th><th>Size</th><th></th></tr>
 <tr><td><b>install.ps1</b></td><td>One-line installer used by the pipe commands above</td><td class='sz'>—</td><td><div class='cardwrap'><a class='mini' href='installers/install.ps1'>Open</a></div></td></tr>
-<tr><td><b>install.sh</b></td><td>Shell installer for the soon-to-land macOS &amp; Linux builds</td><td class='sz'>—</td><td><div class='cardwrap'><a class='mini' href='installers/install.sh'>Open</a></div></td></tr>
+<tr><td><b>install.sh</b></td><td>Shell installer for macOS &amp; Linux — fully working with the x86_64 Linux build today</td><td class='sz'>—</td><td><div class='cardwrap'><a class='mini' href='installers/install.sh'>Open</a></div></td></tr>
 <tr><td><b>CHANGELOG.md</b></td><td>What changed in each York release</td><td class='sz'>—</td><td><div class='cardwrap'><a class='mini' href='CHANGELOG.md'>View</a></div></td></tr>
 <tr><td><b>GitHub Releases</b></td><td>Binaries, checksums, and release notes</td><td class='sz'>—</td><td><div class='cardwrap'><a class='mini' href='https://github.com/TheRealClyp/York/releases'>Open</a></div></td></tr>
 </table>

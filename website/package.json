@@ -1,0 +1,14 @@
+{
+  "name": "york-website",
+  "type": "module",
+  "version": "0.2.55",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/starlight": "^0.42.2",
+    "astro": "^4.16.0"
+  }
+}

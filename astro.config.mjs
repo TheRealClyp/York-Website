@@ -7,6 +7,7 @@ export default defineConfig({
   integrations: [
     starlight({
       title: 'York Programming Language',
+      logo: { src: './logo.svg' },
       social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/TheRealClyp/York' }],
       sidebar: [
         { label: 'Getting Started', items: [{ label: 'Overview', slug: 'index' }, { label: 'Installation', slug: 'guides/installation' }, { label: 'Quick Start', slug: 'guides/quickstart' }] },
